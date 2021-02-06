@@ -1,5 +1,5 @@
 import { getRepository } from 'typeorm';
-import Task from '../models/Task';
+import Task from '../infra/typeorm/entities/Task';
 
 interface Request {
   taskName: string;

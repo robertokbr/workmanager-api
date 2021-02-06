@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { getRepository } from 'typeorm';
-import CreateUserService from '../services/CreateUserService';
-import User from '../models/User';
+import CreateUserService from '@modules/users/services/CreateUserService';
+import User from '@modules/users/infra/typeorm/entities/User';
 
 const usersRouter = Router();
 
@@ -13,16 +13,23 @@ usersRouter.post('/', async (request, response) => {
     password,
     isManager,
   });
+
+  //@ts-ignore
   delete user.password;
+
   return response.json(user);
 });
 
 usersRouter.get('/', async (request, response) => {
   const userRepository = getRepository(User);
   const allUsers = (await userRepository.find()).map(user => {
+
+    //@ts-ignore
     delete user.password;
+
     return user;
   });
+
   return response.json(allUsers);
 });
 

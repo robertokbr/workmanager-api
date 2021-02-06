@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { getRepository } from 'typeorm';
-import CreateTaskService from '../services/CreateTaskService';
-import UpdateTaskService from '../services/UpdateTaskService';
-import ensureAuthenticated from '../middlewares/ensureAuthenticated';
-import Task from '../models/Task';
+import CreateTaskService from '@modules/tasks/services/CreateTaskService';
+import UpdateTaskService from '@modules/tasks/services/UpdateTaskService';
+import ensureAuthenticated from '@shared/infra/http/middlewares/ensureAuthenticated';
+import Task from '@modules/tasks/infra/typeorm/entities/Task';
 
 const taskRouter = Router();
 taskRouter.use(ensureAuthenticated);

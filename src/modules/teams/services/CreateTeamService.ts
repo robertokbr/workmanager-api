@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
-import User from '../models/User';
-import Team from '../models/Team';
+import User from '@modules/users/infra/typeorm/entities/User';
+import Team from '@modules/teams/infra/typeorm/entities/Team';
 
 interface Request {
   manager_id: string;
