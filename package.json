@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/server.js",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
-    "dev:server": "ts-node-dev --inspect --transpileOnly  --ignore-watch node_modules src/server.ts",
+    "dev:server": "ts-node-dev --inspect --transpile-only src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
@@ -48,6 +48,6 @@
     "eslint-plugin-import": "2.21.2",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5",
-    "ts-node-dev": "^1.0.0-pre.44"
+    "ts-node-dev": "^1.1.1"
   }
 }
