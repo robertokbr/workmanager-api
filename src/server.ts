@@ -6,13 +6,18 @@ import routes from './routes';
 import './database';
 
 const app = express();
+const port = process.env.PORT || 3333;
+
 app.use(cors());
+
 app.use(express.json());
+
 app.use(routes);
-app.get('/', async (request, response) => {
-  return response.json({ taFuncionando: 'sim' });
+
+app.get('/', async (_, response) => {
+  return response.json({ connected: true });
 });
 
-app.listen(process.env.PORT || 3333, () => {
-  console.log(`server started on port 3333 at `);
+app.listen(port, () => {
+  console.log(`server started on port ${port}`);
 });

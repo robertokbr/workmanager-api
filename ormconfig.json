@@ -1,14 +1,12 @@
 {
 "type": "postgres",
-"host": "localhost",
-"port": 2998,
-"username": "postgres",
-"password": "d40afbae07a5ae9d4dd12fed413521f5",
-"database": "rj-TaskManager",
+"host": "ec2-34-230-167-186.compute-1.amazonaws.com",
+"port": 5432,
+"username": "kxujxgywgymmmt",
+"password": "56477ce803e87a25e7fef7f4d84ac6d340d4d08951847e0fc6975c2851179af2",
+"database": "d5gsvp3io91ii8",
 "entities": [
   "./dist/models/*.js"
-
-
 ],
 "migrations": [
 "./dist/database/migrations/*.js"
