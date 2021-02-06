@@ -1,0 +1,19 @@
+{
+"type": "postgres",
+"host": "localhost",
+"port": 2998,
+"username": "postgres",
+"password": "d40afbae07a5ae9d4dd12fed413521f5",
+"database": "rj-TaskManager",
+"entities": [
+  "./dist/models/*.js"
+
+
+],
+"migrations": [
+"./dist/database/migrations/*.js"
+],
+  "cli": {
+    "migrationsDir": "./dist/database/migrations"
+  }
+}
