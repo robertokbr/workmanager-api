@@ -5,6 +5,7 @@
 "username": "kxujxgywgymmmt",
 "password": "56477ce803e87a25e7fef7f4d84ac6d340d4d08951847e0fc6975c2851179af2",
 "database": "d5gsvp3io91ii8",
+"logging": true,
 "entities": [
   "./dist/models/*.js"
 ],
