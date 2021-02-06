@@ -1,18 +1,18 @@
 {
 "type": "postgres",
-"host": "ec2-34-230-167-186.compute-1.amazonaws.com",
+"host": "localhost",
 "port": 5432,
-"username": "kxujxgywgymmmt",
-"password": "56477ce803e87a25e7fef7f4d84ac6d340d4d08951847e0fc6975c2851179af2",
-"database": "d5gsvp3io91ii8",
+"username": "postgres",
+"password": "docker",
+"database": "postgres",
 "logging": true,
 "entities": [
-  "./dist/models/*.js"
+  "./src/modules/**/infra/typeorm/entities/*.ts"
 ],
 "migrations": [
-"./dist/database/migrations/*.js"
+"./src/shared/infra/typeorm/migrations/*.ts"
 ],
   "cli": {
-    "migrationsDir": "./dist/database/migrations"
+    "migrationsDir": "./src/shared/infra/typeorm/migrations"
   }
 }
