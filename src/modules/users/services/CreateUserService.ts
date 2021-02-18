@@ -12,7 +12,14 @@ class CreateUserService {
   public async execute({ name, password, isManager }: Request): Promise<User> {
     const usersRepository = getRepository(User);
 
+    const userWithSameUserName = usersRepository.findOne({ where: { name } });
+
+    if (userWithSameUserName) {
+      throw new Error('Username already in use!');
+    }
+
     const hashedPassword = await hash(password, 8);
+
     const user = usersRepository.create({
       name,
       password: hashedPassword,
